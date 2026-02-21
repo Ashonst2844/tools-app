@@ -31,7 +31,7 @@ function playStop(timer) {
     console.log(totalTime)
 
     if (!totalTime) {
-        alert("Enter You Time")
+        alert("Enter Your Time")
     } else { 
         counting = setInterval(function () {
             if (totalTime <= 0) {

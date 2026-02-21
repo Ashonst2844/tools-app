@@ -17,8 +17,7 @@
   outline: none;
   font-family: "Verdana";
   scrollbar-width: none;
-  box-sizing: border-box;
-}
+  box-sizing: border-box;}
 body {
   height: 100vh;
   display: flex;
@@ -28,8 +27,7 @@ body {
   padding: 10px;
   font-size: 12px;
   color: var(--accent);
-  width: 100vw;
-}
+  width: 100vw;}
 .container {
   height: 100%;
   background-color: var(--main-2);
@@ -40,30 +38,24 @@ body {
   grid-template-columns: auto auto auto auto auto auto;
   gap: 10px;
   grid-template-rows: auto auto auto auto auto auto;
-  width: 50%;
-}
+  width: 50%;}
 .container a {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
   flex-wrap: wrap;
-  display: flex;
-}
+  display: flex;}
 .container a i {
   width: 100%;
   display: flex;
   justify-content: center;
-  font-size: 2.5rem;
-}
+  font-size: 2.5rem;}
 .container a h1 {
-  font-size: 1.2em;
-}
+  font-size: 1.2em;}
 .container a:hover {
-  background-color: var(--accent);
-}
+  background-color: var(--accent);}
 .container a:hover i, .container a:hover h1 {
-  color: var(--main);
-}
+  color: var(--main);}
 #backButton {
   height: 50px;
   background-color: var(--accent);
@@ -76,23 +68,20 @@ body {
   top: 0;
   left: 0;
   margin: 10px;
-  width: 50px;
-}
+  z-index: 100;
+  width: 50px;}
 #backButton i {
   font-size: 1.5em;
-  color: var(--main);
-}
-#backButton:hover {
-  background-color: var(--accent-hover);
-}
+  color: var(--main);}
+#backButton:hover, #button button:hover, #control button:hover, #setTimer button:hover, #taskBox .tasks button:hover, #addTask:hover, #form input:nth-child(2):hover, #addNewTask button:hover {
+  background-color: var(--accent-hover);}
 .card {
   flex-wrap: wrap;
   padding: 10px;
   background-color: var(--main-2);
   border-radius: 10px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-  display: flex;
-}
+  display: flex;}
 
 /* CALCULATOR STYLE */
 #display {
@@ -103,8 +92,7 @@ body {
   font-size: 2.5rem;
   overflow-x: scroll;
   padding: 10px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-}
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);}
 #button {
   height: 80%;
   display: grid;
@@ -112,62 +100,107 @@ body {
   grid-template-rows: auto auto auto auto auto;
   width: 100%;
   gap: 5px;
-  padding-top: 10px;
-}
+  padding-top: 10px;}
 #button button {
   border-radius: 10px;
   font-weight: bold;
-  background-color: var(--main-2);
   font-size: 2em;
-  background-color: var(--accent);
-}
-#button button:hover {
-  background: var(--accent-hover);
-  color: var(--main);
-}
+  background-color: var(--accent);}
 
 /* TIMER STYLE */
 #timer {
   width: 100%;
   height: 60%;
   display: flex;
-  gap: 10px;
-}
+  gap: 10px;}
 #timer input {
   font-size: 3rem;
   width: 33.33%;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
-  text-align: center;
-}
+  text-align: center;}
 #control {
   width: 100%;
   height: 40%;
   display: grid;
   grid-template-columns: auto auto;
   padding-top: 10px;
-  gap: 10px;
-}
+  gap: 10px;}
 #control button {
   background-color: var(--accent);
   border-radius: 10px;
-  font-size: 1.5em;
-}
-#control button:hover {
-  background-color: var(--accent-hover);
-}
+  font-size: 1.5em;}
 #setTimer {
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: auto auto;
-  gap: 5px;
-}
+  gap: 5px;}
 #setTimer button {
   background-color: var(--accent);
   border-radius: 10px;
-  font-size: 1.2em;
-}
-#setTimer button:hover {
-  background-color: var(--accent-hover);
-}
+  font-size: 1.2em;}
+
+/* TO DO LIST STYLE */
+#taskBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;}
+#taskBox .tasks {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 5px;}
+#taskBox .tasks span {
+  width: 85%;
+  font-size: 1.5em;
+  color: var(--accent);
+  overflow-y: scroll;}
+#taskBox .tasks button {
+  width: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  height: 100%;
+  border-radius: 10px;
+  background-color: var(--accent);}
+#taskBox .tasks button i {
+  font-size: 1.2em;}
+#addTask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: var(--accent);}
+#addTask i {
+  font-size: 1.5em;}
+#addNewTask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  right: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;}
+#form {
+  width: 60%;
+  height: 100px;}
+#form input {
+  width: 100%;
+  height: 50%;
+  border-radius: 10px;
+  padding: 10px;}
+#addNewTask button {
+  width: 10%;
+  height: 50px;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;}
+#form input:nth-child(2), #addNewTask button {
+  background-color: var(--accent);}
