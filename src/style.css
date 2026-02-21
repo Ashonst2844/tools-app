@@ -15,7 +15,6 @@
   color: var(--color);
   border: none;
   outline: none;
-  transition: all 0.3s ease-in-out;
   font-family: "Verdana";
   scrollbar-width: none;
   box-sizing: border-box;
@@ -62,10 +61,7 @@ body {
 .container a:hover {
   background-color: var(--accent);
 }
-.container a:hover i {
-  color: var(--main);
-}
-.container a:hover h1 {
+.container a:hover i, .container a:hover h1 {
   color: var(--main);
 }
 #backButton {
@@ -89,18 +85,16 @@ body {
 #backButton:hover {
   background-color: var(--accent-hover);
 }
-
-/* CALCULATOR STYLE */
-#calcCard {
+.card {
   flex-wrap: wrap;
   padding: 10px;
-  height: 100%;
   background-color: var(--main-2);
   border-radius: 10px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
   display: flex;
-  width: 35%;
 }
+
+/* CALCULATOR STYLE */
 #display {
   height: 20%;
   background-color: var(--main);
@@ -133,16 +127,6 @@ body {
 }
 
 /* TIMER STYLE */
-#timerCard {
-  flex-wrap: wrap;
-  padding: 10px;
-  height: 40%;
-  background-color: var(--main-2);
-  border-radius: 10px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-  display: flex;
-  width: 60%;
-}
 #timer {
   width: 100%;
   height: 60%;
@@ -170,5 +154,20 @@ body {
   font-size: 1.5em;
 }
 #control button:hover {
+  background-color: var(--accent-hover);
+}
+#setTimer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5px;
+}
+#setTimer button {
+  background-color: var(--accent);
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+#setTimer button:hover {
   background-color: var(--accent-hover);
 }

@@ -9,7 +9,7 @@
 </head>
 <body>
     <a href="../../../index.html" id="backButton"><i class="fa-solid fa-angle-left"></i></a>
-    <div id="timerCard">
+    <div class="card" style="width: 60%; height: 40%;">
         <section id="timer">
             <input type="number" name="hour" id="hour" min="0" placeholder="00" title="Input Hours">
             <input type="number" name="minute" id="minute" min="0" placeholder="00" title="Input Minutes">
@@ -19,6 +19,16 @@
             <button onclick="reset()"><i class="fa-solid fa-arrow-rotate-left"></i></button>
             <button onclick="playStop()"><i class="fa-solid fa-play"></i></button>
         </section>
+    </div>
+    <div class="card" style="width: 20%; height: 40%;">
+        <div id="setTimer">
+            <button onclick="playStop(60)">1 Minutes</button>
+            <button onclick="playStop(60*5)">5 Minutes</button>
+            <button onclick="playStop(60*10)">10 Minutes</button>
+            <button onclick="playStop(60*15)">15 Minutes</button>
+            <button onclick="playStop(60*30)">30 Minutes</button>
+            <button onclick="playStop(60*60)">60 Minutes</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
