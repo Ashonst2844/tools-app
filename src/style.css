@@ -73,7 +73,17 @@ body {
 #backButton i {
   font-size: 1.5em;
   color: var(--main);}
-#backButton:hover, #button button:hover, #control button:hover, #setTimer button:hover, #taskBox .tasks button:hover, #addTask:hover, #form input:nth-child(2):hover, #addNewTask button:hover {
+#backButton:hover, 
+#button button:hover, 
+#control button:hover, 
+#setTimer button:hover, 
+#taskBox .tasks form:hover, 
+#addTask:hover,
+#editBox:hover,
+#form input:nth-child(3):hover,
+#addNewTask button:hover,
+#edit input:nth-child(3):hover,
+#editTask button:hover {
   background-color: var(--accent-hover);}
 .card {
   flex-wrap: wrap;
@@ -159,16 +169,18 @@ body {
   font-size: 1.5em;
   color: var(--accent);
   overflow-y: scroll;}
-#taskBox .tasks button {
+#taskBox .tasks form, #editBox {
   width: 5%;
   display: flex;
   justify-content: center;
   align-items: center ;
   height: 100%;
   border-radius: 10px;
-  background-color: var(--accent);}
-#taskBox .tasks button i {
-  font-size: 1.2em;}
+  background-color: var(--accent);
+  font-size: 0.8rem;}
+#taskBox .tasks form .button, #editBox button {
+  width: 100%;
+  height: 100%;}
 #addTask {
   display: flex;
   align-items: center;
@@ -177,7 +189,7 @@ body {
   background-color: var(--accent);}
 #addTask i {
   font-size: 1.5em;}
-#addNewTask {
+#addNewTask, #editTask {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -188,19 +200,22 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;}
-#form {
+#form, #edit {
   width: 60%;
   height: 100px;}
-#form input {
+#form input, #edit input {
   width: 100%;
   height: 50%;
   border-radius: 10px;
   padding: 10px;}
-#addNewTask button {
+#addNewTask button, #editTask button {
   width: 10%;
   height: 50px;
   padding: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;}
-#form input:nth-child(2), #addNewTask button {
+#form input:nth-child(3), #addNewTask button, #edit input:nth-child(3), #editTask button {
   background-color: var(--accent);}
+.done {
+    text-decoration: line-through;
+    opacity: 0.5;}

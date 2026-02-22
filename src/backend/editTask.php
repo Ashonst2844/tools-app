@@ -1,12 +1,12 @@
 <?php
 include "connect.php";
 
-$text = $_POST["taskText"];
-$state = $_POST["taskState"];
+$id = $_POST["id"];
+$newText = $_POST["newTask"];
 
-$query = "INSERT INTO tododb (text, state) VALUES (?, ?)";
+$query = "UPDATE tododb SET text = ? WHERE id = ?";
 $stmt = $conn->prepare($query);
-$stmt->bind_param("si", $text, $state);
+$stmt->bind_param("si", $newText, $id);
 $stmt->execute();
 
 $stmt->close();

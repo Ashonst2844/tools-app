@@ -24,10 +24,36 @@
             ?>
             <?php while ($tasks = mysqli_fetch_array($result)): ?>
                 <div class="tasks">
-                    <span class="taskText"><?php echo htmlspecialchars($tasks['text']) ?></span>
-                    <button class="checkButton"><i class="fa-solid fa-check"></i></button>
-                    <button class="editButton"><i class="fa-solid fa-pen-to-square"></i></button>
-                    <button class="deleteButton"><i class="fa-solid fa-trash"></i></button>
+                    <span class="taskText <?= $tasks['state'] ? 'done' : '' ?>">
+                        <?= htmlspecialchars($tasks['text']) ?>
+                    </span>
+                    <form action="../../backend/checkTask.php" method="post" class="checkForm">
+                        <input type="hidden" name="id" value="<?= $tasks['id']; ?>">
+                        <button style="background-color: rgba(0,0,0,0);" type="submit" class="checkButton button">
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </form>
+
+                    <div id="editBox">
+                        <button style="background-color: rgba(0,0,0,0);" id="editTaskButton" onclick="openEditBox()">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                    </div>
+
+                    <form action="../../backend/deleteTask.php" method="post">
+                        <input type="hidden" name="id" value="<?php echo $tasks['id']; ?>">
+                        <button style="background-color: rgba(0,0,0,0);" type="submit" class="deleteButton button">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </form>
+                </div>
+                <div id="editTask">
+                    <form id="edit" action="../../backend/editTask.php" method="post">
+                        <input type="text" name="newTask" id="newTask" required>
+                        <input type="hidden" name="id" value="<?= $tasks['id'] ?>">
+                        <input type="submit" value="EDIT">
+                    </form>
+                    <button onclick="closeEditBox()">CANCEL</button>
                 </div>
 
             <?php endwhile ?>
@@ -37,6 +63,7 @@
             <div id="addNewTask">
                 <form id="form" action="../../backend/addTask.php" method="post">
                     <input type="text" name="taskText" id="taskText" required>
+                    <input type="hidden" name="taskState" value="false">
                     <input type="submit" value="ADD">
                 </form>
                 <button onclick="closeNewTask()">CANCEL</button>
