@@ -35,7 +35,7 @@ body {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
   padding: 10px;
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
   gap: 10px;
   grid-template-rows: auto auto auto auto auto auto;
   width: 50%;}

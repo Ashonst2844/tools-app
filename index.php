@@ -33,6 +33,18 @@
             <i class="fa-solid fa-robot"></i>
             <h1>GeminiAI</h1>
         </a>
+        <a href="https://drive.google.com/" title="Google Drive" target="_blank">
+            <i class="fa-brands fa-google-drive"></i>
+            <h1>Google Drive</h1>
+        </a>
+        <a href="https://docs.google.com/" title="Google Document" target="_blank">
+            <i class="fa-solid fa-file"></i>
+            <h1>Google Docs.</h1>
+        </a>
+        <a href="https://fontawesome.com/" title="FontAwesome" target="_blank">
+            <i class="fa-solid fa-font-awesome"></i>
+            <h1>FontAwesome</h1>
+        </a>
     </section>
 </body>
 
