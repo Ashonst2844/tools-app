@@ -2,6 +2,12 @@
 
 <html lang="en">
 
+<?php include "../../backend/connect.php"; ?>
+<?php
+$query = "SELECT * FROM tododb ORDER BY id DESC";
+$result = mysqli_query($conn, $query);
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,17 +17,26 @@
 </head>
 
 <body style="flex-direction: column;">
+
     <a href="../../../index.php" id="backButton"><i class="fa-solid fa-angle-left"></i></a>
-    <div class="card" style="width: 80%; height: 20%;">
+    <div class="card" style="width: 20%; height: 20%;">
+        <?php
+        $totalQuery = mysqli_query($conn, "SELECT COUNT(*) as total FROM tododb");
+        $totalData = mysqli_fetch_assoc($totalQuery);
+        $counter = $totalData['total'];
+        $doneQuery = mysqli_query($conn, "SELECT COUNT(*) as done FROM tododb WHERE state = 1");
+        $doneData = mysqli_fetch_assoc($doneQuery);
+        $done = $doneData['done'];
+        ?>
+
+        <span id="counter">
+            <b><?php echo $done ?></b>/
+            <b><?php echo $counter ?></b><i style="font-size:0.6em">Tasks</i>
+        </span>
 
     </div>
     <div class="card" style="width: 80%; height: 80%;">
         <div id="taskBox">
-            <?php include "../../backend/connect.php"; ?>
-            <?php
-            $query = "SELECT * FROM tododb ORDER BY id DESC";
-            $result = mysqli_query($conn, $query);
-            ?>
             <?php while ($tasks = mysqli_fetch_array($result)): ?>
                 <div class="tasks">
                     <span class="taskText <?= $tasks['state'] ? 'done' : '' ?>">

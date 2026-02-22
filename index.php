@@ -23,6 +23,10 @@
             <i class="fa-solid fa-book"></i>
             <h1>To-Do-List</h1>
         </a>
+        <a href="src/apps/randomizer/random.html" title="Randomizer">
+            <i class="fa-solid fa-shuffle"></i>
+            <h1>Randomizer</h1>
+        </a>
     </section>
     <section id="webs" class="container">
         <a href="https://chatgpt.com" title="ChatGPT" target="_blank">
