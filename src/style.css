@@ -85,7 +85,8 @@ body {
 #edit input:nth-child(3):hover,
 #editTask button:hover,
 #itemsInput button:hover,
-#randomizer button:hover {
+#randomizer button:hover,
+#controlTTT .tttgame:hover {
   background-color: var(--accent-hover);}
 .card {
   flex-wrap: wrap;
@@ -273,3 +274,38 @@ body {
   height: 10%;
   border-radius: 10px;
   font-size: 1.5em;}
+
+/* TIC-TAC-TOE STYLE */
+#gameContainer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  gap: 5px;}
+#gameWindow {
+  opacity: 0.4;
+}
+  .gameBox {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main);
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;}
+.gameBox span {
+  position: absolute;
+  font-size: 2rem;}
+#controlTTT {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;}
+#controlTTT .tttgame  {
+  width: 100%;
+  height: 50%;
+  background-color: var(--accent);
+  border-radius: 5px;}

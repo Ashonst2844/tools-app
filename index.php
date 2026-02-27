@@ -27,6 +27,10 @@
             <i class="fa-solid fa-shuffle"></i>
             <h1>Randomizer</h1>
         </a>
+        <a href="src/apps/tictactoe/game.html" title="Tic-Tac-Toe">
+            <i class="fa-solid fa-gamepad"></i>
+            <h1>Tic-Tac-Toe</h1>
+        </a>
     </section>
     <section id="webs" class="container">
         <a href="https://chatgpt.com" title="ChatGPT" target="_blank">
@@ -50,6 +54,8 @@
             <h1>FontAwesome</h1>
         </a>
     </section>
+
+    <script src="src/main.js"></script>
 </body>
 
 </html>
