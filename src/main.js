@@ -32,13 +32,13 @@ var webs = [
         link: "https://chat.openai.com/"
     },
     {
-        name: "Gemini",
-        icon: "fa-solid fa-gem",
+        name: "GeminiAI",
+        icon: "fa-solid fa-robot",
         link: "https://gemini.google.com/"
     },
     {
         name: "Google Drive",
-        icon: "fa-solid fa-google-drive",
+        icon: "fa-brands fa-google-drive",
         link: "https://drive.google.com/"
     },
     {
@@ -53,5 +53,40 @@ var webs = [
     }
 ]
 
-console.log(apps);
-console.log(webs);
+let appsSorter = apps.sort((a, b) => a.name.localeCompare(b.name))
+
+const appsParent = document.querySelector("#apps")
+for (let app of appsSorter) {
+    const link = document.createElement("a")
+    link.href = app.link
+    link.title = app.name
+    link.target = "_blank"
+
+    const icon = document.createElement("i")
+    icon.className = app.icon
+    link.appendChild(icon)
+
+    const name = document.createElement("h1")
+    name.textContent = app.name
+    link.appendChild(name)
+
+    appsParent.appendChild(link)
+}
+let websSorter = webs.sort((a, b) => a.name.localeCompare(b.name))
+const websParent = document.querySelector("#webs")
+for (let web of websSorter) {
+    const link = document.createElement("a")
+    link.href = web.link
+    link.title = web.name
+    link.target = "_blank"
+
+    const icon = document.createElement("i")
+    icon.className = web.icon
+    link.appendChild(icon)
+
+    const name = document.createElement("h1")
+    name.textContent = web.name
+    link.appendChild(name)
+
+    websParent.appendChild(link)
+}

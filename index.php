@@ -10,50 +10,8 @@
 </head>
 
 <body>
-    <section id="apps" class="container">
-        <a href="src/apps/calc/calc.html" title="Calculator">
-            <i class="fa-solid fa-calculator"></i>
-            <h1>Calculator</h1>
-        </a>
-        <a href="src/apps/timer/timer.html" title="Timer">
-            <i class="fa-regular fa-clock"></i>
-            <h1>Timer</h1>
-        </a>
-        <a href="src/apps/todolist/todolist.php" title="To Do List">
-            <i class="fa-solid fa-book"></i>
-            <h1>To-Do-List</h1>
-        </a>
-        <a href="src/apps/randomizer/random.html" title="Randomizer">
-            <i class="fa-solid fa-shuffle"></i>
-            <h1>Randomizer</h1>
-        </a>
-        <a href="src/apps/tictactoe/game.html" title="Tic-Tac-Toe">
-            <i class="fa-solid fa-gamepad"></i>
-            <h1>Tic-Tac-Toe</h1>
-        </a>
-    </section>
-    <section id="webs" class="container">
-        <a href="https://chatgpt.com" title="ChatGPT" target="_blank">
-            <i class="fa-solid fa-robot"></i>
-            <h1>ChatGPT</h1>
-        </a>
-        <a href="https://gemini.google.com" title="GeminiAI" target="_blank">
-            <i class="fa-solid fa-robot"></i>
-            <h1>GeminiAI</h1>
-        </a>
-        <a href="https://drive.google.com/" title="Google Drive" target="_blank">
-            <i class="fa-brands fa-google-drive"></i>
-            <h1>Google Drive</h1>
-        </a>
-        <a href="https://docs.google.com/" title="Google Document" target="_blank">
-            <i class="fa-solid fa-file"></i>
-            <h1>Google Docs.</h1>
-        </a>
-        <a href="https://fontawesome.com/" title="FontAwesome" target="_blank">
-            <i class="fa-solid fa-font-awesome"></i>
-            <h1>FontAwesome</h1>
-        </a>
-    </section>
+    <section id="apps" class="container"></section>
+    <section id="webs" class="container"></section>
 
     <script src="src/main.js"></script>
 </body>
