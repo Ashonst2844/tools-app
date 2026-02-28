@@ -22,7 +22,7 @@ function clearList() {
 
 function updateList() {
     const previewSect = document.querySelector("#previewSect");
-    previewSect.innerHTML = `<button onclick="deleteList()">Delete</button>`;
+    previewSect.innerHTML = `<button class="button" onclick="deleteList()">Delete</button>`;
     lists.forEach(list => {
         previewSect.innerHTML += `<span>${list}</span>`;
     });

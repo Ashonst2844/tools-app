@@ -8,23 +8,20 @@
     <script src="https://kit.fontawesome.com/29575beb59.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <a href="../../../index.php" id="backButton"><i class="fa-solid fa-angle-left"></i></a>
+    <a href="../../../index.php" class="backButton button"><i class="fa-solid fa-angle-left"></i></a>
     <div class="card" style="width: 60%; height: 60%;">
         <div id="randomizer">
             <div id="itemsInput">
                 <input type="text" name="items" id="items">
-                <button onclick="enter()">Enter</button>
+                <button class="button" onclick="enter()">Enter</button>
             </div>
             <div id="previewSect" class="sect">
-                <button onclick="deleteList()">Delete</button>
-                <span>Galih</span>
-                <span>Sheba</span>
-                <span>Yuda</span>
+                <button class="button" onclick="deleteList()">Delete</button>
             </div>
             <div id="resultSect" class="sect">
-                <button onclick="clearList()">Clear</button>
+                <button class="button" onclick="clearList()">Clear</button>
             </div>
-            <button onclick="randomizing()">RANDOM</button>
+            <button class="button" onclick="randomizing()">RANDOM</button>
         </div>
     </div>
     <script src="script.js"></script>
